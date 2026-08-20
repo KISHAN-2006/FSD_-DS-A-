@@ -3,23 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Destructuring</title>
+    <title>Document</title>
 </head>
 <body>
     <script>
-         const student = {
-            name : "kishan",
-            Branch : "Btech",
-            fee : 128600
-         }
-         const {a,b,c} = student;
-         console.log(a);
-         console.log(b);
-         console.log(c);
+        // const a11 = [1,2,3];
+        // const b11 = [4,5,6];
+        // const c = [...a11, ...b11 ];
+        // document.write(c);
 
-        // const num = [1,10,30];
-        // let [a,b,c] = num;
-        // document.write(a,b,c);
+
+        let student = [
+            {
+                name : "kishan",
+                branch :"btech",
+                rollno : 123
+
+            },
+             {
+                name : "rahul",
+                branch :"btech",
+                rollno : 456
+
+            },
+             {
+                name : "mohan",
+                branch :"mtech",
+                rollno : 1000
+
+            },
+            {
+                name : "sohan",
+                branch :"mtech",
+                rollno : 1001
+
+            },
+            {
+                name : "vikash",
+                branch :"MCA",
+                rollno : 1002
+
+            }
+        ]
+         
+     let branch = prompt("Enter the branch"); 
+     let result = student.filter((s) => s.branch == branch);
+
+     document.write(result);
+
     </script>
+    
 </body>
 </html>
